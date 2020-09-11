@@ -1,0 +1,841 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+    text-decoration: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*Comienzo del renovado menú de navegación*/
+
+main {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    color: white;
+}
+
+.content-all {
+    width: 100%;
+    background: #17a086;
+    margin: auto;
+    margin-top: 80px;
+    border: 2px solid white;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    height: 60px;
+    left: 0;
+    top: 0;
+    bottom: 20px;
+    background: #19bc9d;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked ~ .menu {
+    width: 400px;
+    font-size: 25px;
+    text-decoration: none;
+    margin-bottom: 0;
+    background: rgb(65, 80, 95);
+}
+
+.menu {
+    position: fixed;
+    top: 60px;
+    width: 0px;
+    height: 100vh;
+    transition: all 500ms cubic-bezier(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.menu li {
+    padding: 16px;
+    color: white;
+    cursor: pointer;
+    transition: all 300ms;
+    display: block;
+    width: 400px;
+}
+
+.menu li:hover {
+    background: rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+.menu img {
+    border-radius: 50%;
+    font-size: 40px;
+    text-align: center;
+    margin: 0 0 0 130px;
+    margin-top: 10px;
+    transition: all 500ms cubic-bezier(0, 0, 0, 0.2);
+}
+
+#articulo {
+    padding: 40px;
+}
+
+.content-all label {
+    position: fixed;
+    width: 100%;
+    top: 14px;
+    margin: 0 0 0 10px;
+    font-size: 26px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.content-all h2 {
+    position: fixed;
+    width: 100%;
+    max-width: 1300px;
+    top: -4px;
+    font-size: 26px;
+    text-align: right;
+}
+
+/*Comienzo de los iconos de compartir*/
+
+.social-bar {
+    position: fixed;
+    right: 0;
+    top: 35%;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 100;
+    width: 45px;
+}
+
+.desaparecer {
+    margin-left: -45px;
+    width: 0;
+}
+
+#boton {
+    font-size: 35px;
+}
+
+.icon {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: flex;
+}
+
+.icon-facebook2 {
+    background: #2e406e;
+}
+
+.icon-instagram {
+    background: #3f60a5;
+}
+
+.icon-twitter {
+    background: #339dc5;
+}
+
+.icon-share2 {
+    background: #e83028;
+}
+
+.icon:first-child {
+    border-radius: 1.5rem 0 0 0;
+}
+
+.icon:last-child {
+    border-radius: 0 0 0 1.5rem;
+}
+
+.icon:hover {
+    padding-right: 3rem;
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, .42);
+    text-decoration: none;
+}
+
+/*Comienza los títulos*/
+
+section, .time, form {
+    padding: 20px;
+}
+
+.start {
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #000;
+    background: rgb(110, 118, 141);
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 25px;
+    margin-top: 110px;
+}
+    .start span{
+        margin-right: 10px;
+        color: rgb(19, 20, 20);
+    }
+
+.sucesion, h3 {
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #000;
+    background: rgb(110, 118, 141);
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+    .sucesion span {
+        margin-right: 10px;
+        color: rgb(21, 22, 22);
+    }
+
+.ideas {
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #000;
+    background: rgb(110, 118, 141);
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+    .ideas span {
+        margin-right: 10px;
+        color: rgb(21, 22, 22);
+    }
+
+.finish {
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #000;
+    background: rgb(110, 118, 141);
+    font-weight: bold;    
+    font-size: 25px;
+}
+
+    .finish span {
+        margin-right: 10px;
+        color: rgb(21, 22, 22);
+    }
+/**======================
+* Parte de Sidebar 
+=======================*/
+
+.sidebar {
+    text-align: center;
+    font-size: 40px;
+    background: #b4b2b2;
+    border-radius: 10%;
+    border: 2px dashed #000;
+    color: #232c2f;
+}
+
+.sidebar span {
+    margin-right: 15px;
+    color: #101010;
+    background: #fcfcfc;
+    border-radius: 50%;
+    margin-top: -20px;
+}
+
+table .fila {
+    font-weight: bold;
+    font-size: 20px;
+    background: #ccc;
+    text-align: center;
+}
+
+table .fila:hover {
+    background: #918e8e;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+table .columna {
+    font-weight: bold;
+    font-size: 20px;
+    background: #fff;
+}
+
+table .columna:hover {
+    background: #ccc;
+    font-weight: bold;
+    font-size: 70px;
+}
+
+#items, #titulo {
+    font-size: 25px;
+    background: #24303c;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+#items, #titulo:hover {
+    background: #05122e;
+}
+
+table {
+    margin: 0 20px;
+}
+
+table td {
+    border: 1px solid #000;
+    padding: 20px;
+}
+
+table p {
+    font-size: 15px;
+    color: #05122e;
+}
+
+/* Parte de los Comentarios */
+
+ a {
+    color: #03658c;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif, Verdana;
+    background: #dee1de;
+}
+
+/**====================
+* Lista de Comentarios
+=======================*/
+
+.comments-container {
+    margin: 60px auto 15px;
+    width: 768px;
+}
+
+.comments-container h1 {
+    font-size: 36px;
+    color: #283035;
+    font-weight: 400;
+}
+
+.comments-container h1 a {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.comments-list {
+    margin-top: 30px;
+    position: relative;
+}
+
+/**=================
+* Líneas / Detalles
+====================*/
+
+.comments-list:before {
+    content: '';
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    left: 32px;
+    top: 0;
+    background: #c7cacb;
+}
+
+.comments-list:after {
+    content: '';
+    position: absolute;
+    background: #c7cacb;
+    bottom: 0;
+    left: 27px;
+    width: 7px;
+    height: 7px;
+    border: 3px solid #dee1e3;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.reply-list:before, .reply-list:after {
+    display: none;
+}
+
+.reply-list li:before {
+    content: '';
+    width: 60px;
+    height: 2px;
+    background: #c7cacb;
+    position: absolute;
+    top: 25px;
+    left: -55px;
+}
+
+.comments-list li {
+    margin-bottom: 15px;
+    display: block;
+    position: relative;
+}
+
+.comments-list li:after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    width: 0;
+}
+
+.reply-list {
+    padding-left: 88px;
+    clear: both;
+    margin-top: 15px;
+}
+
+/**=======
+* Avatar
+==========*/
+
+.comments-list .comment-avatar {
+    width: 65px;
+    height: 65px;
+    position: relative;
+    z-index: 99;
+    float: left;
+    border: 3px solid #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    overflow: hidden;
+}
+
+.comments-list .comment-avatar img {
+    width: 100%;
+    height: 100%;
+}
+
+.reply-list .comment-avatar {
+    width: 50px;
+    height: 50px;
+}
+
+.comment-main-level::after {
+    content: '';
+    width: 0;
+    height: 0;
+    display: block;
+    clear: both;
+}
+
+/**====================
+* Caja del Comentario
+=====================*/
+
+.comments-list .comment-box {
+    width: 680px;
+    float: right;
+    position: relative;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.comments-list .comment-box:before, .comments-list .comment-box:after {
+    content: '';
+    height: 0;
+    width: 0;
+    position: absolute;
+    display: block;
+    border-width: 10px 12px 10px 0;
+    border-style: solid;
+    border-color: transparent #3f3d3d;
+    top: 8px;
+    left: -11px;
+}
+
+.comments-list .comment-box:before {
+    border-width: 11px 13px 11px 0;
+    border-color: transparent rgba(0,0,0,0.05);
+    left: -12px;
+}
+
+.reply-list .comment-box {
+    width: 610px;
+}
+
+.comment-box .comment-head {
+    background: #f1eded;
+    padding: 10px 12px;
+    border-bottom: 1px solid #e5e5e5;
+    overflow: hidden;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+}
+
+.comment-box .comment-head i {
+    float: right;
+    margin-left: 14px;
+    position: relative;
+    top: 2px;
+    color: #a6a6a6;
+    cursor: pointer;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+
+.comment-box .comment-head i:hover {
+    color: #03658c;
+}
+
+.comment-box .comment-name {
+    color: #283035;
+    font-size: 14px;
+    font-weight: 700;
+    float: left;
+    margin-right: 10px;
+}
+
+.comment-box .comment-name a {
+    color: #283035;
+}
+
+.comment-box .comment-head span {
+    float: left;
+    color: #999;
+    font-size: 13px;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.comment-box .comment-content {
+    background: #fff;
+    padding: 12px;
+    font-size: 15px;
+    color: #595959;
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+}
+
+.comment-box .comment-name.by-author, .comment-box .comment-name a {
+    color: #03658c;
+}
+    .comment-box .comment-name.by-author:after {
+        content: 'autor';
+        background: #03658c;
+        color: #fff;
+        font-size: 12px;
+        padding: 3px 5px;
+        font-weight: 700;
+        margin-left: 10px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+    }
+
+/*Parte del Formulario*/
+
+.form-register {
+    width: 400px;
+    background: #24303c;
+    padding: 30px;
+    margin: auto;
+    margin-top: 20px;
+    display: block;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    box-shadow: 7px 13px 37px #000;
+}
+
+.form-register h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.controls {
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+}
+
+.form-register p {
+    height: 40px;
+    text-align: center;
+    font-size: 14.5px;
+    line-height: 40px;
+}
+
+.form-register a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.form-register a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.form-register .botons {
+    width: 100%;
+    background: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/*Parte del pie de página*/
+
+.time {
+    text-align: center;
+    display: block;
+    padding: 5px;
+    background: black;
+    color: white;
+    font-size: 22px;
+}
+
+    .time:hover {
+        background: white;
+        color: black;
+    }
+
+.pie {
+    width: 100%;
+    background: #202020;
+    color: white;
+}
+
+.container-footer-all {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
+}
+
+.container-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column1 {
+    max-width: 400px;
+}
+
+.column1 h1 {
+    font-size: 22px;
+}
+
+.column1 p {
+    font-size: 14px;
+    color: #c7c7c7;
+    margin-top: 20px;
+}
+
+.column2 {
+    max-width: 400px;
+}
+
+.column2 h1 {
+    font-size: 22px;
+    margin-right: 40px;
+}
+
+.row {
+    margin-top: 20px;
+    display: flex;
+}
+
+.row a {
+    text-decoration: none;
+    color: #727171;
+}
+
+.row a:hover {
+    text-decoration: none;
+    color: #c7c7c7;
+}
+
+.row img {
+    width: 36px;
+    height: 36px;
+}
+
+.row label {
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #c7c7c7;
+}
+
+.column3 {
+    max-width: 400px;
+}
+
+.column3 h1 {
+    font-size: 22px;
+}
+
+.row2 {
+    margin-top: 20px;
+    display: flex;
+    margin-left: -30px;
+}
+
+.row2 a {
+    text-decoration: none;
+    color: #727171;
+}
+
+.row2 a:hover {
+    text-decoration: none;
+    color: #c7c7c7;
+}
+
+.row2 img {
+    width: 36px;
+    height: 36px;
+}
+
+.row2 label {
+    margin-left: 10px;
+    max-width: 140px;
+    margin-top: 10px;
+}
+
+.container-footer {
+    width: 100%;
+    background: #101010;
+}
+
+.footer {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    font-size: 15px;
+}
+
+.copyright {
+    color: #c7c7c7;
+}
+
+.copyright a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.information a {
+    color: #c7c7c7;
+    text-decoration: none;
+}
+
+/*=========================
+    * Menú de Navegación
+==========================*/
+
+@media screen and (max-width: 1300px) {
+    main {
+        width: 80%;
+        height: 100%;
+        max-width: 1000px;
+    }
+}
+
+/*======================
+    * Pie de Página
+========================*/
+
+@media screen and (max-width:1100px){
+
+    .container-body {
+        flex-wrap: wrap;
+    }
+
+    .column1 {
+        max-width: 100%;
+    }
+
+    .column2, .column3 {
+        margin-top: 40px;
+    }
+}
+
+/*========================
+    * Formulario 
+=========================*/
+
+@media screen and (max-width: 1100px) {
+    .form-register {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .form-register {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .form-register {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .form-register {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .form-register {
+        width: 100%;
+    }
+    .form-register p {
+        font-size: 13px;
+    }
+}
+
+/**=========================================
+* Responsive de la parte de los comentarios
+============================================*/
+
+@media screen and (max-width: 766px) {
+    .comments-container {
+        width: 480px;
+    }
+
+    .comments-list .comment-box {
+        width: 390px;
+    }
+
+    .reply-list .comment-box {
+        width: 320px;
+    }
+}
